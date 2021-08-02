@@ -1,0 +1,21 @@
+.dot {
+  height: 300px;
+  width: 300px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: 40px;
+  bottom: 50%;
+}
+.centrep {
+  height: 200px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 200px;
+}

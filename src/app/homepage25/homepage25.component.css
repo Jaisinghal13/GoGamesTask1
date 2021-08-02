@@ -1,0 +1,47 @@
+.shape {
+  background-color: #ca51cf;
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+}
+::placeholder {
+  color: #251942;
+  opacity: 1;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+:-ms-input-placeholder {
+  color: #251942;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+::-ms-input-placeholder {
+  color: #251942;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.buttonshape {
+  background-color: #ca51cf;
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  width: 150px;
+  font-size: large;
+}

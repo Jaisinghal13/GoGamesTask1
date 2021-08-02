@@ -1,0 +1,120 @@
+.nav-link.active.show {
+  background-color: transparent;
+}
+.nav-link.active {
+  background-color: transparent;
+}
+.nav-tabs .nav-link {
+  border: none;
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: white;
+  border-bottom: 4px solid blueviolet;
+}
+a {
+  color: white;
+}
+.nav-tabs {
+  border-bottom: none;
+}
+.tab-content {
+  margin-top: 30px;
+}
+.card {
+  background-color: #241942;
+}
+.image {
+  border-radius: 10%;
+}
+.buttona {
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 1px 20px;
+  font-size: large;
+  position: absolute;
+  top: 65%;
+  left: 3%;
+  font-weight: bold;
+}
+.soon {
+  color: blue;
+  font-size: 20px;
+}
+.whit {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+.cont {
+  margin-bottom: 50px;
+}
+.buttonn {
+  background-color: white;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 1px 20px;
+  font-size: large;
+  position: absolute;
+  font-weight: bold;
+}
+.job {
+  text-align: center;
+  font-weight: bold;
+}
+p {
+  margin-bottom: 0rem;
+  text-align: center;
+}
+label {
+  font-weight: bold;
+  float: right;
+}
+.bg-2 {
+  background-color: gray;
+  opacity: 0.8;
+}
+::placeholder {
+  color: white;
+  opacity: 1;
+  font-size: 1.1em;
+  /* font-weight: 530; */
+}
+
+:-ms-input-placeholder {
+  color: white;
+  font-size: 1.1em;
+  /* font-weight: 530; */
+}
+
+::-ms-input-placeholder {
+  color: white;
+  font-size: 1.1em;
+  /* font-weight: 530; */
+}
+.form-control {
+  color: white;
+}
+
+.btn-save {
+  color: #241942;
+  font-weight: bold;
+}
+.close-btn {
+  background-color: #ba32ff;
+  padding: 2px 12px;
+}
+.bg-one {
+  background-color: #241942;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}

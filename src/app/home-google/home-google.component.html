@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-lg-4"></div>
+  <div class="col-lg-4 mt-4">
+    <div class="form-group">
+      <input
+        class="form-control"
+        type="text"
+        placeholder="Enter name"
+        [(ngModel)]="username"
+        onkeypress="return ((event.charCode > 64 && event.charCode < 91)  || (event.charCode > 96 && event.charCode < 123) ||event.charCode == 32);"
+      />
+    </div>
+  </div>
+</div>
+<div class="col-lg-4"></div>
+<div class="dot">
+  <p class="centrep">
+    {{
+      username.trim().charAt(0) + username.charAt(username.lastIndexOf(" ") + 1)
+    }}
+  </p>
+</div>

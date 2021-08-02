@@ -1,0 +1,36 @@
+.shape {
+  background-color: #ca51cf;
+  border: none;
+  color: white;
+  padding: 3px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+}
+.resize {
+  width: 20vw;
+}
+.tabledesign {
+  width: 100%;
+}
+.tableheading {
+  text-align: center;
+}
+th,
+td {
+  font-size: large;
+  height: 50px;
+}
+.inputshape {
+  border: none;
+  padding: 7px 23px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+}

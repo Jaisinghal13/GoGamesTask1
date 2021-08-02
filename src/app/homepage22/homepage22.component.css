@@ -1,0 +1,105 @@
+.shape {
+  background-color: #ca51cf;
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+}
+.inputshape {
+  border: none;
+  padding: 7px 23px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+}
+.labelsize {
+  font-size: large;
+  font-weight: bold;
+}
+
+::placeholder {
+  color: #251942;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #251942;
+}
+
+::-ms-input-placeholder {
+  color: #251942;
+}
+
+.boxdesign {
+  border: solid 2px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #251942;
+  color: white;
+}
+
+.buttonshape {
+  background-color: #ca51cf;
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: large;
+  width: 150px;
+}
+
+.marginset {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.marginsetright {
+  margin-right: 2vw;
+  margin-left: 1vw;
+}
+
+.marginsetleft {
+  margin-left: 3vw;
+  margin-right: 1vw;
+}
+
+@media (min-width: 360px) and (max-width: 991px) {
+  .marginsetright {
+    margin-right: 5vw;
+    margin-left: 5vw;
+  }
+  .marginsetleft {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .inputshape {
+    border: none;
+    padding: 3px 10px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    width: 40vw;
+  }
+  .labelsize {
+    font-size: small;
+    font-weight: bold;
+  }
+}

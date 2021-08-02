@@ -1,0 +1,183 @@
+.shape {
+  background-color: #ca51cf;
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.table {
+  border: none;
+  border-collapse: collapse;
+  width: 100vw;
+  text-align: center;
+}
+
+td,
+th,
+thead {
+  border: none;
+  margin: 0px;
+  /* width: 60vw;
+  height: 60vw; */
+}
+
+.selectoption {
+  background-color: white;
+  border: none;
+  color: #241952;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 21px;
+  font-weight: bold;
+  height: 50px;
+}
+
+.optionsize {
+  background-color: white;
+  border: none;
+  color: #ca51cf;
+  padding: 10px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: bold;
+  height: 20px;
+}
+
+.form-control {
+  width: 15vw;
+}
+
+.custom-select {
+  width: 15vw;
+}
+
+select {
+  text-align-last: center;
+}
+.inputshape {
+  border: none;
+  padding: 7px 23px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+}
+.headingdesign {
+  text-align: center;
+  font-weight: bold;
+}
+::placeholder {
+  color: #251942;
+  opacity: 1;
+  font-weight: bold;
+}
+
+:-ms-input-placeholder {
+  color: #251942;
+  font-weight: bold;
+}
+
+::-ms-input-placeholder {
+  color: #251942;
+  font-weight: bold;
+}
+.selectoptionforstatus {
+  background-color: white;
+  border: none;
+  color: #241952;
+  padding: 7px 23px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 9px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.fontteam {
+  font-weight: bold;
+}
+.selectoptionforgogameid {
+  background-color: white;
+  border: none;
+  color: #241952;
+  padding: 7px 23px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 6px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (min-width: 360px) and (max-width: 991px) {
+  .inputshape {
+    border: none;
+    padding: 5px 13px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 2vw;
+    /* width: 100vw; */
+  }
+  .form-control {
+    width: 50vw;
+  }
+
+  .custom-select {
+    width: 50vw;
+  }
+  .selectoptionforgogameid {
+    background-color: white;
+    border: none;
+    color: #241952;
+    padding: 1px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 6px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .selectoptionforstatus {
+    background-color: white;
+    border: none;
+    color: #241952;
+    padding: 7px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 13px 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}

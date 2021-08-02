@@ -1,0 +1,109 @@
+@import '../../../../styles.scss';
+
+.one {
+  list-style-type: none;
+}
+.size1 {
+  font-size: large;
+}
+.rules {
+  margin-left: 13px;
+  color: #fafafa;
+  font-size: 27px;
+  font-family: 'RajdhaniSemiBold';
+  font-weight: 600;
+}
+.marg {
+  margin-bottom: 50px;
+}
+.marg2 {
+  margin-bottom: 100px;
+}
+.marg3 {
+  margin-top: 20px;
+  margin-left: -10px;
+}
+.shape {
+  background-color: var(--button-primary);
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 25px;
+  font-weight: bold;
+}
+.bg-one {
+  background-color: #241942;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+  font-size: 1.1em;
+  /* font-weight: 530; */
+}
+
+:-ms-input-placeholder {
+  color: white;
+  font-size: 1.1em;
+  /* font-weight: 530; */
+}
+
+::-ms-input-placeholder {
+  color: white;
+  font-size: 1.1em;
+  /* font-weight: 530; */
+}
+.bg-2 {
+  background-color: #241942;
+}
+
+li{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'Rajdhani';
+  color: #fafafa; 
+}
+
+@media (min-width: 360px) and (max-width: 991px) {
+  .shape {
+    background-color: #ca51cf;
+    border: none;
+    color: white;
+    padding: 3px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 1px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-weight: bold;
+  }
+}
+.btn-save {
+  background-color: #ba32ff;
+  font-size: 17px;
+  color: white;
+  font-weight: 600;
+}
+.modal-header {
+  border-bottom: none;
+}
+.close-btn {
+  background-color: #ba32ff;
+  padding: 2px 12px;
+}
+label {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.form-control {
+  border: 1px solid #423178;
+  color: white;
+  font-size: 1.1em;
+  /* font-weight: 530; */
+}
