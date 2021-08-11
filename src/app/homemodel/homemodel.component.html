@@ -1,3 +1,17 @@
+<nav class="navbar justify-content-between">
+  <img src="../../assets/GoGameLive.png" alt="GoGameLive" />
+  <div class="my-2 my-lg-0">
+    <p class="float-left mr-2 mt-3">GO TO GOGAME.LIVE</p>
+    <button
+      class="btn btn-primary"
+      data-toggle="modal"
+      data-target="#exampleModal"
+    >
+      <i class="fa fa-briefcase ico"></i> POST A FREE JOB
+    </button>
+  </div>
+</nav>
+<img class="img-fluid imag" src="../../assets/Screenshot (2127).png" alt="" />
 <div class="container">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
@@ -9,7 +23,7 @@
         role="tab"
         aria-controls="home"
         aria-selected="true"
-        >All Jobs</a
+        >ALL JOBS</a
       >
     </li>
     <li class="nav-item">
@@ -21,7 +35,7 @@
         role="tab"
         aria-controls="profile"
         aria-selected="false"
-        >Full Time</a
+        >FULL TIME</a
       >
     </li>
     <li class="nav-item">
@@ -33,7 +47,7 @@
         role="tab"
         aria-controls="contact"
         aria-selected="false"
-        >Part Time</a
+        >PART TIME</a
       >
     </li>
     <li class="nav-item">
@@ -45,7 +59,7 @@
         role="tab"
         aria-controls="contact"
         aria-selected="false"
-        >Feedback</a
+        >FREELANCE</a
       >
     </li>
   </ul>
@@ -56,71 +70,51 @@
       role="tabpanel"
       aria-labelledby="home-tab"
     >
-      <div style="margin-top: 10px" *ngFor="let column of headers">
+      <div style="margin-top: 10px" *ngFor="let employee of employees.employee">
         <div class="card">
           <div class="card-body">
             <div class="row">
               <div class="col-lg-1 col-12 col-sm-1">
                 <div class="row">
                   <img
-                    class="img-fluid image mb-4"
+                    class="img-fluid mb-4"
                     src="../../assets/download.png"
                     alt=""
                   />
                 </div>
+              </div>
+              <div class="col-lg-3">
                 <div class="row">
-                  <button
-                    class="buttona btn btn"
-                    data-toggle="modal"
-                    data-target="#exampleModal"
-                  >
-                    Apply
-                  </button>
+                  <p class="infosys">{{ employee.job_role }}</p>
+                </div>
+                <div class="row">
+                  <p class="year">
+                    {{ employee.start_date }}
+                  </p>
                 </div>
               </div>
-              <div class="col-lg-9 col-sm-9">
-                <div class="row">
-                  <div class="col-lg-1"></div>
-                  <div class="col-lg-2 col-sm-2">
-                    <p class="soon">Coming Soon</p>
-                    <p class="whit">Infosys</p>
-                  </div>
-                  <div class="col-lg-2 col-sm-2"></div>
-                  <div style="text-align: center" class="col-lg-3 col-sm-3">
-                    <p class="soon">Coming Soon</p>
-                    <p class="whit">Infosys</p>
-                  </div>
-                  <div class="col-lg-2 col-sm-2"></div>
-                  <div class="col-lg-2 col-sm-2">
-                    <p class="soon">Coming Soon</p>
-                    <p class="whit">Infosys</p>
-                  </div>
-                  <!-- <div class="col-lg-1"></div> -->
-                </div>
-                <div class="row">
-                  <div class="col-lg-3 col-sm-3"></div>
-                  <!-- <div class="col-lg-2"></div> -->
-                  <div class="col-lg-2 col-sm-2">
-                    <p class="soon">Coming Soon</p>
-                    <p class="whit">Infosys</p>
-                  </div>
-                  <div class="col-lg-3 col-sm-3"></div>
-                  <div class="col-lg-2 col-sm-2">
-                    <p class="soon">Coming Soon</p>
-                    <p class="whit">Infosys</p>
-                  </div>
-                  <div class="col-lg-2 col-sm-2"></div>
-                  <!-- <div class="col-lg-1"></div> -->
-                </div>
+
+              <div class="col-lg-2">
+                <p class="time">
+                  <i class="fa fa-briefcase ico"></i>{{ employee.job_type }}
+                </p>
               </div>
-              <div style="text-align: center" class="col-lg-2 col-sm-2">
-                <button
-                  class="buttonn btn btn"
-                  data-toggle="modal"
-                  data-target="#exampleModal1"
-                >
-                  Open
-                </button>
+              <div class="col-lg-2">
+                <p class="hyd">
+                  <i class="fa fa-briefcase ico"></i>{{ employee.job_location }}
+                </p>
+              </div>
+              <div class="col-lg-2">
+                <p class="experience">
+                  <i class="fa fa-briefcase ico"></i>{{ employee.experience }}
+                </p>
+              </div>
+              <div
+                class="col-lg-2 col-sm-2 see-details"
+                data-toggle="modal"
+                data-target="#exampleModal2"
+              >
+                SEE DETAILS
               </div>
             </div>
           </div>
@@ -163,140 +157,171 @@
           data-dismiss="modal"
           aria-label="Close"
         >
-          <span
-            style="color: #170d2a; font-size: 50px; margin: 0px 0px 8px"
-            aria-hidden="true"
-            >&times;</span
-          >
+          <span class="sp" aria-hidden="true">&times;</span>
         </button>
       </div>
-      <h1 class="job">JOB POSTING</h1>
+      <h1 class="job">POST A FREE JOB</h1>
 
       <div class="modal-body">
-        <div class="row">
-          <div class="col-lg-1"></div>
-          <div class="col-lg-10">
-            <div class="row">
-              <div class="col-lg-3">
-                <label class="labelsize col-form-label">Employee Name : </label>
-              </div>
-              <div class="col-lg-3">
-                <input
-                  type="name"
-                  class="form-control inputshape bg-2"
-                  placeholder="Type here"
-                  onkeypress="return ((event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || event.charCode == 8 || event.charCode == 32);"
-                />
-              </div>
-              <div class="col-lg-3">
-                <label class="labelsize col-form-label">Job Title : </label>
-              </div>
-              <div class="col-lg-3">
-                <input
-                  type="text"
-                  class="form-control inputshape bg-2"
-                  placeholder="Type here"
-                  onkeypress="return ((event.charCode >= 48 && event.charCode <= 57) || event.charCode == 8 || event.charCode == 32);"
-                />
-              </div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-lg-3">
-                <label class="labelsize col-form-label">Employee Name : </label>
-              </div>
-              <div class="col-lg-3">
-                <input
-                  type="text"
-                  class="form-control inputshape bg-2"
-                  placeholder="Type here"
-                />
-              </div>
-              <div class="col-lg-3">
-                <label class="labelsize col-form-label">Job Location : </label>
-              </div>
-              <div class="col-lg-3">
-                <input
-                  type="text"
-                  class="form-control inputshape bg-2"
-                  placeholder="Type here"
-                />
-              </div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-lg-3">
-                <label class="labelsize col-form-label">Employee Name : </label>
-              </div>
-              <div class="col-lg-3">
-                <input
-                  type="text"
-                  class="form-control inputshape bg-2"
-                  placeholder="Type here"
-                />
-              </div>
-              <div class="col-lg-3">
-                <label class="labelsize col-form-label">Job Location : </label>
-              </div>
-              <div class="col-lg-3">
-                <input
-                  type="text"
-                  class="form-control inputshape bg-2"
-                  placeholder="Type here"
-                />
-              </div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-lg-3">
-                <label class="labelsize col-form-label">Employee Name : </label>
-              </div>
-              <div class="col-lg-3">
-                <input
-                  type="text"
-                  class="form-control inputshape bg-2"
-                  placeholder="Type here"
-                />
-              </div>
-              <div class="col-lg-3">
-                <label class="labelsize col-form-label">Job Location : </label>
-              </div>
-              <div class="col-lg-3">
-                <input
-                  type="text"
-                  class="form-control inputshape bg-2"
-                  placeholder="Type here"
-                />
-              </div>
-            </div>
-
-            <div class="row mt-3">
-              <div class="col-lg-3">
-                <label class="labelsize col-form-label">Message : </label>
-              </div>
-              <div class="col-lg-9">
-                <textarea
-                  class="form-control bg-2"
-                  id="message-text"
-                  placeholder="Type your message here..."
-                  rows="5;"
-                ></textarea>
-              </div>
-            </div>
-
-            <div class="mt-3" style="text-align: center">
-              <button
-                type="button"
-                class="btn-save btn"
-                data-toggle="modal"
-                data-target="#exampleModal1"
-                data-dismiss="modal"
-              >
-                SUBMIT
-              </button>
+        <div class="row mt-4">
+          <div class="col-lg-12">
+            <h5 class="heading">Contact Details</h5>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-lg-6 p-right">
+            <div class="form-group">
+              <label>Contact Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Contact Name"
+              />
             </div>
           </div>
-          <div class="col-lg-1"></div>
+          <div class="col-lg-6 p-left">
+            <div class="form-group">
+              <label>Contact Number</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Contact Number"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 p-right">
+            <div class="form-group">
+              <label>Contact Email</label>
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Contact Email"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6"></div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h5 class="heading">Job Details</h5>
+          </div>
+        </div>
+        <div class="row mt-2">
+          <div class="col-lg-6 p-right">
+            <div class="form-group">
+              <label>Company Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Company Name"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 p-left">
+            <div class="form-group">
+              <label class="float-left">Company Logo</label>
+              <p class="float-right upload-label-left">
+                Non-transparent jpg, png, bmp
+              </p>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" />
+                <label class="custom-file-label">UPLOAD</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 p-right">
+            <label>Job Role</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Job Location"
+            />
+          </div>
+          <div class="col-lg-6 p-left">
+            <div class="form-group">
+              <label>Job Location</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Job Location"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 p-right">
+            <div class="form-group">
+              <label>Experience Level</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Experience Level"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 p-left">
+            <div class="form-group">
+              <label>Job Type</label>
+              <br />
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn btn-secondary mr-2">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option1"
+                    autocomplete="off"
+                  />
+                  Part-time
+                </label>
+                <label class="btn btn-secondary mr-2 active">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option2"
+                    autocomplete="off"
+                    checked
+                  />
+                  Full-time
+                </label>
+                <label class="btn btn-secondary">
+                  <input
+                    type="radio"
+                    name="options"
+                    id="option3"
+                    autocomplete="off"
+                  />
+                  Freelance
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col-lg-12">
+            <div class="form-group">
+              <label>Role Description</label>
+              <textarea
+                class="form-control"
+                placeholder="Explain the Role and Responsibilities..."
+                rows="3"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <button
+            class="btn btn-custom-primary ml-3 appl"
+            data-toggle="modal"
+            data-target="#exampleModal1"
+            data-dismiss="modal"
+            data-toggle="modal"
+          >
+            SUBMIT
+          </button>
         </div>
       </div>
     </div>
@@ -312,9 +337,8 @@
   aria-hidden="true"
   data-backdrop="static"
   data-keyboard="false"
-  style="margin-left: 5vw; margin-right: 5vw"
 >
-  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content bg-one">
       <div class="modal-header" style="border-bottom: none">
         <button
@@ -323,39 +347,129 @@
           data-dismiss="modal"
           aria-label="Close"
         >
-          <span
-            style="color: #170d2a; font-size: 50px; margin: 0px 0px 8px"
-            aria-hidden="true"
-            >&times;</span
-          >
+          <span class="sp" aria-hidden="true">&times;</span>
         </button>
       </div>
-      <h1 class="job">JOB POSTING</h1>
-      <div class="modal-body pb-4 pr-4 pl-4">
-        <br />
-        <p style="text-align: left; font-weight: bold; font-size: larger">
-          Contrary to popular belief, Lorem Ipsum is not simply random text. It
-          has roots in a piece of classical Latin literature from 45 BC, making
-          it over 2000 years old.
-        </p>
-        <div style="text-align: center" class="mt-5">
+
+      <div class="modal-body custom-padding-modal">
+        <div class="text-center">
+          <p class="successful-message">Submitted Successfully</p>
           <img
-            style="border-radius: 10%"
-            class="img-fluid"
-            src="../../assets/Dummy.jpg"
-            alt=""
+            class="img-fluid img-tick mt-4 mb-4"
+            src="../../assets/img-green-tick.png"
+            alt="tickimage"
           />
+          <p class="text-below-image-tick">
+            Thank you for your job posting. Our Admin would verify the
+            information and post it on the website job list shortly
+          </p>
         </div>
-        <div style="text-align: center">
-          <button
-            type="button"
-            class="btn-save btn mt-4"
-            data-dismiss="modal"
-            data-toggle="modal"
-            data-target="#exampleModal"
-          >
-            CANCEL
-          </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal2"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+  data-backdrop="static"
+  data-keyboard="false"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content bg-one">
+      <div class="mod">
+        <div class="row">
+          <div class="col-lg-11"></div>
+          <div class="col-lg-1">
+            <button
+              type="button"
+              class="close close-btn"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span class="sp" aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-2">
+            <img
+              class="img-fluid image-see-details"
+              src="../../assets/download.png"
+              alt=""
+            />
+          </div>
+          <div class="col-lg-3 ml-2">
+            <div class="row">
+              <p class="infosy">INFOSYS</p>
+            </div>
+            <div class="row">
+              <p class="ye">GAME ARTIST</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="row mt-5">
+          <div class="col-lg-9">
+            <div class="row">
+              <div class="col-lg-3">
+                <p><i class="fa fa-briefcase ico"></i> Part-time</p>
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3">
+                <p><i class="fa fa-briefcase ico"></i> Hyderabad</p>
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-lg-3">
+                <p><i class="fa fa-briefcase ico"></i> 3-5 years</p>
+              </div>
+            </div>
+            <hr style="background-color: white" />
+            <div class="row">
+              <div class="col-lg-12">
+                <h6 style="font-weight: bold">Job Description</h6>
+                <p>
+                  Contrary to popular belief, Lorem Ipsum is not simply random
+                  text. It has roots in a piece of classical Latin literature
+                  from 45 BC, making it over 2000 years old. Richard McClintock,
+                  a Latin professor at Hampden-Sydney College in Virginia,
+                  looked up one of the more obscure Latin words, consectetur,
+                  from a Lorem Ipsum passage, and going through the cites of the
+                  word in classical literature, discovered the undoubtable
+                  source. (The Extremes of Good and Evil) by Cicero, written in
+                  45 BC. This book is a treatise on the theory of ethics, very
+                  popular during the Renaissance. The first line of Lorem Ipsum,
+                </p>
+                <p class="mt-2">
+                  "Lorem ipsum dolor sit amet..", comes from a line in section
+                  1.10.32. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+                  of "de Finibus Bonorum et Malorum" (The Extremes of Good and
+                  Evil) by Cicero, written in 45 BC. The first line of Lorem
+                  Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
+                  section 1.10.32. Lorem Ipsum comes from sections 1.10.32 and
+                  1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of
+                  Good and Evil) by Cicero, written in 45 BC.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 sto">
+            <p style="font-size: small">Share this opportunity</p>
+            <i class="fa fa-instagram mr-3"></i>
+            <i class="fa fa-facebook mr-3"></i>
+            <i class="fa fa-twitter"></i>
+            <button
+              class="btn btn-custom-primary mt-3 appl"
+              data-dismiss="modal"
+            >
+              APPLY NOW
+            </button>
+          </div>
         </div>
       </div>
     </div>

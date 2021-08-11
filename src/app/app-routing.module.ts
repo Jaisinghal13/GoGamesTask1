@@ -10,6 +10,7 @@ import { NavbarSlideComponent } from './navbar-slide/navbar-slide.component';
 import { HomeNewComponent } from './home-new/home-new.component';
 import { HomeGoogleComponent } from './home-google/home-google.component';
 import { HomemodelComponent } from './homemodel/homemodel.component';
+import { ScrollspyComponent } from './scrollspy/scrollspy.component';
 
 const routes: Routes = [
   {
@@ -52,8 +53,12 @@ const routes: Routes = [
     path: 'home-model',
     component: HomemodelComponent,
   },
-  { path: '', redirectTo: 'home-model', pathMatch: 'full' },
-  { path: '**', component: HomemodelComponent },
+  {
+    path: 'scrollspy',
+    component: ScrollspyComponent,
+  },
+  { path: '', redirectTo: 'scrollspy', pathMatch: 'full' },
+  { path: '**', component: ScrollspyComponent },
 ];
 
 @NgModule({

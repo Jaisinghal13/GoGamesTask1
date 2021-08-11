@@ -1,0 +1,22 @@
+.one {
+  list-style-type: none;
+}
+body {
+  background-color: #130628;
+  color: white;
+  font-family: "Rajdhani";
+  position: absolute;
+}
+.rules {
+  margin-left: 13px;
+}
+.marg {
+  margin-bottom: 50px;
+}
+.marg2 {
+  margin-bottom: 100px;
+}
+.marg3 {
+  margin-top: 20px;
+  margin-left: -10px;
+}

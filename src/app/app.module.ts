@@ -14,6 +14,7 @@ import { HomeNewComponent } from './home-new/home-new.component';
 import { HomeGoogleComponent } from './home-google/home-google.component';
 import { FormsModule } from '@angular/forms';
 import { HomemodelComponent } from './homemodel/homemodel.component';
+import { ScrollspyComponent } from './scrollspy/scrollspy.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HomemodelComponent } from './homemodel/homemodel.component';
     HomeNewComponent,
     HomeGoogleComponent,
     HomemodelComponent,
+    ScrollspyComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
