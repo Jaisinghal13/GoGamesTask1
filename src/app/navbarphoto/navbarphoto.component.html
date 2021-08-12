@@ -1,0 +1,15 @@
+<nav class="navbar navbar-dark bg-dark justify-content-between pb-0">
+  <a class="navbar-brand"></a>
+  <div class="pt-2">
+    <p
+      class="rounded-circle px-2 py-1 float-left font-weight-bold"
+      style="background-color: grey"
+    >
+      {{
+        username.trim().charAt(0) +
+          username.charAt(username.lastIndexOf(" ") + 1)
+      }}
+    </p>
+    <span class="px-2 float-right header-username mt-1"> {{ username }} </span>
+  </div>
+</nav>

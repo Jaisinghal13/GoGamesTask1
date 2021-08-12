@@ -11,6 +11,7 @@ import { HomeNewComponent } from './home-new/home-new.component';
 import { HomeGoogleComponent } from './home-google/home-google.component';
 import { HomemodelComponent } from './homemodel/homemodel.component';
 import { ScrollspyComponent } from './scrollspy/scrollspy.component';
+import { NavbarphotoComponent } from './navbarphoto/navbarphoto.component';
 
 const routes: Routes = [
   {
@@ -57,8 +58,12 @@ const routes: Routes = [
     path: 'scrollspy',
     component: ScrollspyComponent,
   },
-  { path: '', redirectTo: 'scrollspy', pathMatch: 'full' },
-  { path: '**', component: ScrollspyComponent },
+  {
+    path: 'navbarphoto',
+    component: NavbarphotoComponent,
+  },
+  { path: '', redirectTo: 'navbarphoto', pathMatch: 'full' },
+  { path: '**', component: NavbarphotoComponent },
 ];
 
 @NgModule({

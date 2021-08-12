@@ -15,6 +15,7 @@ import { HomeGoogleComponent } from './home-google/home-google.component';
 import { FormsModule } from '@angular/forms';
 import { HomemodelComponent } from './homemodel/homemodel.component';
 import { ScrollspyComponent } from './scrollspy/scrollspy.component';
+import { NavbarphotoComponent } from './navbarphoto/navbarphoto.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { ScrollspyComponent } from './scrollspy/scrollspy.component';
     HomeGoogleComponent,
     HomemodelComponent,
     ScrollspyComponent,
+    NavbarphotoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
