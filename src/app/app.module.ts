@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { HomemodelComponent } from './homemodel/homemodel.component';
 import { ScrollspyComponent } from './scrollspy/scrollspy.component';
 import { NavbarphotoComponent } from './navbarphoto/navbarphoto.component';
+import { BannerProfileComponent } from './banner-profile/banner-profile.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { NavbarphotoComponent } from './navbarphoto/navbarphoto.component';
     HomemodelComponent,
     ScrollspyComponent,
     NavbarphotoComponent,
+    BannerProfileComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

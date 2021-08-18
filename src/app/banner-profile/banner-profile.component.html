@@ -1,0 +1,40 @@
+<div class="banner">
+  <div class="row">
+    <div class="col-1"></div>
+    <div class="col-lg-4 col-md-6 col-sm-8 col-10">
+      <div class="card mt-4">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="text-center">
+                <i class="fa fa-pencil pencil d-lg-none"></i>
+                <h1 class="circle">
+                  {{
+                    username.trim().charAt(0) +
+                      username.charAt(username.lastIndexOf(" ") + 1)
+                  }}
+                </h1>
+              </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 pt-1">
+              <h5>{{ username }}</h5>
+              <p>{{ time }}</p>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 d-none d-sm-block">
+              <i class="fa fa-pencil"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-3 col-sm-2"></div>
+    <div class="col-lg-4 col-md-3 col-sm-2 col-1"></div>
+  </div>
+</div>
+
+<!-- class="text-center py-3 mx-3 font-weight-bold"
+style="
+  background-color: grey;
+  border-radius: 50%;
+  font-size: 25px;
+" -->

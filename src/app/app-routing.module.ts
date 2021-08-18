@@ -12,6 +12,7 @@ import { HomeGoogleComponent } from './home-google/home-google.component';
 import { HomemodelComponent } from './homemodel/homemodel.component';
 import { ScrollspyComponent } from './scrollspy/scrollspy.component';
 import { NavbarphotoComponent } from './navbarphoto/navbarphoto.component';
+import { BannerProfileComponent } from './banner-profile/banner-profile.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path: 'navbarphoto',
     component: NavbarphotoComponent,
+  },
+  {
+    path: 'bannerprofile',
+    component: BannerProfileComponent,
   },
   { path: '', redirectTo: 'navbarphoto', pathMatch: 'full' },
   { path: '**', component: NavbarphotoComponent },
