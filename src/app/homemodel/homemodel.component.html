@@ -1,14 +1,18 @@
 <nav class="navbar justify-content-between">
   <img src="../../assets/GoGameLive.png" alt="GoGameLive" />
   <div class="my-2 my-lg-0">
-    <p class="float-left mr-2 mt-3">GO TO GOGAME.LIVE</p>
-    <button
+    <p class="float-left mr-2 mt-3">
+      <a style="text-decoration: none" href="https://www.gogame.live/"
+        >GO TO GOGAME.LIVE</a
+      >
+    </p>
+    <!-- <button
       class="btn btn-primary"
       data-toggle="modal"
       data-target="#exampleModal"
     >
       <i class="fa fa-briefcase ico"></i> POST A FREE JOB
-    </button>
+    </button> -->
   </div>
 </nav>
 <img class="img-fluid imag" src="../../assets/Screenshot (2127).png" alt="" />
@@ -23,6 +27,7 @@
         role="tab"
         aria-controls="home"
         aria-selected="true"
+        (click)="onAllJob()"
         >ALL JOBS</a
       >
     </li>
@@ -35,6 +40,7 @@
         role="tab"
         aria-controls="profile"
         aria-selected="false"
+        (click)="onFullTimeJob()"
         >FULL TIME</a
       >
     </li>
@@ -47,6 +53,7 @@
         role="tab"
         aria-controls="contact"
         aria-selected="false"
+        (click)="onPartTimeJob()"
         >PART TIME</a
       >
     </li>
@@ -55,10 +62,11 @@
         class="nav-link"
         id="contact-tab"
         data-toggle="tab"
-        href="#contact"
+        href="#freelance"
         role="tab"
         aria-controls="contact"
         aria-selected="false"
+        (click)="onFreelanceJob()"
         >FREELANCE</a
       >
     </li>
@@ -70,14 +78,17 @@
       role="tabpanel"
       aria-labelledby="home-tab"
     >
-      <div style="margin-top: 10px" *ngFor="let employee of employees.employee">
+      <div
+        style="margin-top: 10px"
+        *ngFor="let employee of employees_temp.employee"
+      >
         <div class="card">
           <div class="card-body">
             <div class="row">
               <div class="col-lg-1 col-12 col-sm-1">
                 <div class="row">
                   <img
-                    class="img-fluid mb-4"
+                    class="img-fluid mb-4 pl-1"
                     src="../../assets/download.png"
                     alt=""
                   />
@@ -85,7 +96,9 @@
               </div>
               <div class="col-lg-3">
                 <div class="row">
-                  <p class="infosys">{{ employee.job_role }}</p>
+                  <p class="infosys">
+                    {{ employee.company }}-{{ employee.job_role }}
+                  </p>
                 </div>
                 <div class="row">
                   <p class="year">
@@ -101,12 +114,78 @@
               </div>
               <div class="col-lg-2">
                 <p class="hyd">
-                  <i class="fa fa-briefcase ico"></i>{{ employee.job_location }}
+                  <i class="fa fa-map-marker ico"></i
+                  >{{ employee.job_location }}
                 </p>
               </div>
               <div class="col-lg-2">
                 <p class="experience">
-                  <i class="fa fa-briefcase ico"></i>{{ employee.experience }}
+                  <i class="fas fa-clock ico"></i>{{ employee.experience }}
+                </p>
+              </div>
+              <div
+                class="col-lg-2 col-sm-2 see-details"
+                data-toggle="modal"
+                data-target="#exampleModal2"
+                (click)="onSeeDetail(employee.id)"
+              >
+                <a> SEE DETAILS</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="tab-pane fade"
+      id="profile"
+      role="tabpanel"
+      aria-labelledby="profile-tab"
+    >
+      <div
+        style="margin-top: 10px"
+        *ngFor="let employee of employees_temp.employee"
+      >
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-1 col-12 col-sm-1">
+                <div class="row">
+                  <img
+                    class="img-fluid mb-4 pl-1"
+                    src="../../assets/download.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="row">
+                  <p class="infosys">
+                    {{ employee.company }}-{{ employee.job_role }}
+                  </p>
+                </div>
+                <div class="row">
+                  <p class="year">
+                    {{ employee.start_date }}
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-2">
+                <p class="time">
+                  <i class="fa fa-briefcase ico"></i>{{ employee.job_type }}
+                </p>
+              </div>
+              <div class="col-lg-2">
+                <p class="hyd">
+                  <i class="fa fa-map-marker ico"></i
+                  >{{ employee.job_location }}
+                </p>
+              </div>
+              <div class="col-lg-2">
+                <p class="experience">
+                  <i class="fas fa-clock ico"></i>{{ employee.experience }}
                 </p>
               </div>
               <div
@@ -114,7 +193,7 @@
                 data-toggle="modal"
                 data-target="#exampleModal2"
               >
-                SEE DETAILS
+                <a (click)="onSeeDetail(employee.id)"> SEE DETAILS</a>
               </div>
             </div>
           </div>
@@ -123,18 +202,156 @@
     </div>
     <div
       class="tab-pane fade"
-      id="profile"
-      role="tabpanel"
-      aria-labelledby="profile-tab"
-    ></div>
-    <div
-      class="tab-pane fade"
       id="contact"
       role="tabpanel"
       aria-labelledby="contact-tab"
     >
-      ...
+      <div
+        style="margin-top: 10px"
+        *ngFor="let employee of employees_temp.employee"
+      >
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-1 col-12 col-sm-1">
+                <div class="row">
+                  <img
+                    class="img-fluid mb-4 pl-1"
+                    src="../../assets/download.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="row">
+                  <p class="infosys">
+                    {{ employee.company }}-{{ employee.job_role }}
+                  </p>
+                </div>
+                <div class="row">
+                  <p class="year">
+                    {{ employee.start_date }}
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-2">
+                <p class="time">
+                  <i class="fa fa-briefcase ico"></i>{{ employee.job_type }}
+                </p>
+              </div>
+              <div class="col-lg-2">
+                <p class="hyd">
+                  <i class="fa fa-map-marker ico"></i
+                  >{{ employee.job_location }}
+                </p>
+              </div>
+              <div class="col-lg-2">
+                <p class="experience">
+                  <i class="fas fa-clock ico"></i>{{ employee.experience }}
+                </p>
+              </div>
+              <div
+                class="col-lg-2 col-sm-2 see-details"
+                data-toggle="modal"
+                data-target="#exampleModal2"
+              >
+                <a (click)="onSeeDetail(employee.id)"> SEE DETAILS</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <div
+      class="tab-pane fade"
+      id="freelance"
+      role="tabpanel"
+      aria-labelledby="freelance-tab"
+    >
+      <div
+        style="margin-top: 10px"
+        *ngFor="let employee of employees_temp.employee"
+      >
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-1 col-12 col-sm-1">
+                <div class="row">
+                  <img
+                    class="img-fluid mb-4 pl-1"
+                    src="../../assets/download.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="row">
+                  <p class="infosys">
+                    {{ employee.company }}-{{ employee.job_role }}
+                  </p>
+                </div>
+                <div class="row">
+                  <p class="year">
+                    {{ employee.start_date }}
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-2">
+                <p class="time">
+                  <i class="fa fa-briefcase ico"></i>{{ employee.job_type }}
+                </p>
+              </div>
+              <div class="col-lg-2">
+                <p class="hyd">
+                  <i class="fa fa-map-marker ico"></i
+                  >{{ employee.job_location }}
+                </p>
+              </div>
+              <div class="col-lg-2">
+                <p class="experience">
+                  <i class="fas fa-clock ico"></i>{{ employee.experience }}
+                </p>
+              </div>
+              <div
+                class="col-lg-2 col-sm-2 see-details"
+                data-toggle="modal"
+                data-target="#exampleModal2"
+                (click)="onSeeDetail(employee.id)"
+              >
+                <a> SEE DETAILS</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" (click)="onClickPrevious()">Previous</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" (click)="onContentChange(1)">1</a>
+          </li>
+          <li class="page-item">
+            <a (click)="onContentChange(2)" class="page-link">2</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" (click)="onContentChange(3)">3</a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" (click)="onClickNext()">Next</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-lg-4"></div>
   </div>
 </div>
 
@@ -370,6 +587,7 @@
 </div>
 
 <div
+  *ngFor="let employee of employees_temp.employee"
   class="modal fade"
   id="exampleModal2"
   tabindex="-1"
@@ -404,65 +622,57 @@
             />
           </div>
           <div class="col-lg-3 ml-2">
-            <div class="row">
-              <p class="infosy">INFOSYS</p>
+            <div class="row" *ngIf="employees.employee[index_Id - 1]">
+              <p class="infosy">
+                {{ employees.employee[index_Id - 1].company }}
+              </p>
             </div>
-            <div class="row">
-              <p class="ye">GAME ARTIST</p>
+            <div class="row" *ngIf="employees.employee[index_Id - 1]">
+              <p class="ye">{{ employees.employee[index_Id - 1].job_role }}</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" *ngIf="employees.employee[index_Id - 1]">
         <div class="row mt-5">
           <div class="col-lg-9">
             <div class="row">
               <div class="col-lg-3">
-                <p><i class="fa fa-briefcase ico"></i> Part-time</p>
+                <p>
+                  <i class="fa fa-briefcase ico"></i
+                  >{{ employees.employee[index_Id - 1].job_type }}
+                </p>
               </div>
               <div class="col-lg-1"></div>
               <div class="col-lg-3">
-                <p><i class="fa fa-briefcase ico"></i> Hyderabad</p>
+                <p>
+                  <i class="fa fa-briefcase ico"></i
+                  >{{ employees.employee[index_Id - 1].job_location }}
+                </p>
               </div>
               <div class="col-lg-1"></div>
               <div class="col-lg-3">
-                <p><i class="fa fa-briefcase ico"></i> 3-5 years</p>
+                <p>
+                  <i class="fa fa-briefcase ico"></i
+                  >{{ employees.employee[index_Id - 1].experience }}
+                </p>
               </div>
             </div>
             <hr style="background-color: white" />
             <div class="row">
               <div class="col-lg-12">
                 <h6 style="font-weight: bold">Job Description</h6>
-                <p>
-                  Contrary to popular belief, Lorem Ipsum is not simply random
-                  text. It has roots in a piece of classical Latin literature
-                  from 45 BC, making it over 2000 years old. Richard McClintock,
-                  a Latin professor at Hampden-Sydney College in Virginia,
-                  looked up one of the more obscure Latin words, consectetur,
-                  from a Lorem Ipsum passage, and going through the cites of the
-                  word in classical literature, discovered the undoubtable
-                  source. (The Extremes of Good and Evil) by Cicero, written in
-                  45 BC. This book is a treatise on the theory of ethics, very
-                  popular during the Renaissance. The first line of Lorem Ipsum,
-                </p>
-                <p class="mt-2">
-                  "Lorem ipsum dolor sit amet..", comes from a line in section
-                  1.10.32. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
-                  of "de Finibus Bonorum et Malorum" (The Extremes of Good and
-                  Evil) by Cicero, written in 45 BC. The first line of Lorem
-                  Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in
-                  section 1.10.32. Lorem Ipsum comes from sections 1.10.32 and
-                  1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of
-                  Good and Evil) by Cicero, written in 45 BC.
+                <p style="text-align: justify; justify-content: inter-word">
+                  {{ employees.employee[index_Id - 1].job_description }}
                 </p>
               </div>
             </div>
           </div>
           <div class="col-lg-3 sto">
             <p style="font-size: small">Share this opportunity</p>
-            <i class="fa fa-instagram mr-3"></i>
-            <i class="fa fa-facebook mr-3"></i>
-            <i class="fa fa-twitter"></i>
+            <i class="fab fa-instagram mr-3"></i>
+            <i class="fab fa-facebook mr-3"></i>
+            <i class="fab fa-twitter"></i>
             <button
               class="btn btn-custom-primary mt-3 appl"
               data-dismiss="modal"

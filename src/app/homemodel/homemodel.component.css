@@ -316,3 +316,10 @@ label {
   padding-bottom: 30px;
   padding-left: 30px;
 }
+.page-link {
+  background-color: #170d2a;
+  border: none;
+}
+a {
+  cursor: pointer;
+}
