@@ -13,10 +13,11 @@ import { HomemodelComponent } from './homemodel/homemodel.component';
 import { ScrollspyComponent } from './scrollspy/scrollspy.component';
 import { NavbarphotoComponent } from './navbarphoto/navbarphoto.component';
 import { BannerProfileComponent } from './banner-profile/banner-profile.component';
+import { ReviewGogameComponent } from './review-gogame/review-gogame.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: 'home_1',
     component: HomeComponent,
   },
   {
@@ -44,7 +45,7 @@ const routes: Routes = [
     component: NavbarSlideComponent,
   },
   {
-    path: 'homenew',
+    path: 'home-new',
     component: HomeNewComponent,
   },
   {
@@ -67,8 +68,12 @@ const routes: Routes = [
     path: 'bannerprofile',
     component: BannerProfileComponent,
   },
-  { path: '', redirectTo: 'navbarphoto', pathMatch: 'full' },
-  { path: '**', component: NavbarphotoComponent },
+  {
+    path: 'review-gogame',
+    component: ReviewGogameComponent,
+  },
+  { path: '', redirectTo: 'review-gogame', pathMatch: 'full' },
+  { path: '**', component: ReviewGogameComponent },
 ];
 
 @NgModule({

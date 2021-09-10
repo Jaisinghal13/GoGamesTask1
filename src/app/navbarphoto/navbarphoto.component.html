@@ -1,3 +1,7 @@
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
 <nav class="navbar navbar-dark bg-dark justify-content-between pb-0">
   <a class="navbar-brand"></a>
   <div class="pt-2">
@@ -10,6 +14,24 @@
           username.charAt(username.lastIndexOf(" ") + 1)
       }}
     </p>
-    <span class="px-2 float-right header-username mt-1"> {{ username }} </span>
+    <span class="px-2 float-right header-username">
+      <ul class="nav nav-pills">
+        <li class="dropdown">
+          <a data-toggle="dropdown">{{ username }} </a>
+          <ul class="dropdown-menu" id="menu1">
+            <li><a>Edit Profile</a></li>
+            <li>
+              <a>Submenu</a>
+              <ul class="dropdown-menu sub-menu">
+                <li><a>Submenu Action</a></li>
+                <li><a>Another Action</a></li>
+              </ul>
+            </li>
+
+            <li><a>Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </span>
   </div>
 </nav>

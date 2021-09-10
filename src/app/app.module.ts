@@ -17,6 +17,7 @@ import { HomemodelComponent } from './homemodel/homemodel.component';
 import { ScrollspyComponent } from './scrollspy/scrollspy.component';
 import { NavbarphotoComponent } from './navbarphoto/navbarphoto.component';
 import { BannerProfileComponent } from './banner-profile/banner-profile.component';
+import { ReviewGogameComponent } from './review-gogame/review-gogame.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { BannerProfileComponent } from './banner-profile/banner-profile.componen
     ScrollspyComponent,
     NavbarphotoComponent,
     BannerProfileComponent,
+    ReviewGogameComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
