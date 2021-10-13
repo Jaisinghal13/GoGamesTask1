@@ -1,0 +1,77 @@
+.header-username {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "RajdhaniBold";
+  margin-top: -7px;
+}
+.dropdown-menu > li > a:hover {
+  background-color: transparent;
+  background-image: none;
+}
+.sidebar-nav {
+  padding: 9px 0;
+}
+
+.dropdown-menu {
+  background-color: #16032a;
+  color: #fff;
+  font-weight: bold;
+}
+
+.dropdown-menu .sub-menu {
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  margin-top: 35px;
+  margin-left: -160px;
+}
+
+.dropdown-menu li:hover .sub-menu {
+  visibility: visible;
+}
+li:hover {
+  background-color: transparent;
+  color: #ba32ff;
+}
+a:active {
+  background-color: transparent;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar .nav > li > .dropdown-menu:after {
+  border-bottom: 0px;
+  border-right: 0px;
+}
+
+.navbar .nav > li > .dropdown-menu:before {
+  border-bottom: 0px;
+  border-right: 0px;
+}
+
+.btn-custom-primary {
+  color: #fff;
+  background: #ba32ff 0% 0% no-repeat padding-box;
+  border: 1px solid #ba32ff;
+  opacity: 1;
+}
+
+.card {
+  border-radius: 0%;
+  background-color: grey;
+}
+
+.bg-one {
+  background-color: #241942;
+}
+
+.modal {
+  background-color: transparent;
+  box-shadow: none;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  width: 2%;
+}
